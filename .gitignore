@@ -1,0 +1,28 @@
+# Backend
+server/venv/
+server/__pycache__/
+server/.pytest_cache/
+server/*.db
+server/*.pyc
+server/.env
+
+# Frontend
+client/node_modules/
+client/build/
+client/.env
+client/.env.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
