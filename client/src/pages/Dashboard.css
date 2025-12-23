@@ -1,0 +1,235 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #f9fafb 0%, #f3f4f6 100%);
+}
+
+.dashboard-header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 24px 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.dashboard-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-header-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 4px 0;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dashboard-header-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 0;
+  font-weight: 500;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px;
+}
+
+.dashboard-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard-form-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 16px;
+  align-items: end;
+}
+
+.dashboard-select-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dashboard-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.dashboard-select {
+  padding: 12px 14px;
+  font-size: 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: #374151;
+}
+
+.dashboard-select:hover {
+  border-color: #c4b5fd;
+}
+
+.dashboard-select:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.dashboard-button-wrapper {
+  align-self: end;
+}
+
+.dashboard-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+  color: #991b1b;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #fca5a5;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-tasks-section {
+  margin-top: 32px;
+}
+
+.dashboard-tasks-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.dashboard-tasks-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.dashboard-task-count {
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+  color: #5b21b6;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #c4b5fd;
+  box-shadow: 0 2px 4px rgba(139, 92, 246, 0.1);
+  letter-spacing: 0.01em;
+}
+
+.dashboard-empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 16px;
+  border: 2px dashed #d1d5db;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.dashboard-empty-state:hover {
+  border-color: #a78bfa;
+  background: linear-gradient(to bottom, white 0%, #faf5ff 100%);
+}
+
+.dashboard-empty-state svg {
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.dashboard-empty-state:hover svg {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.dashboard-empty-state-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+.dashboard-empty-state-subtext {
+  font-size: 14px;
+  color: #9ca3af;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 20px 24px;
+  }
+
+  .dashboard-header-title {
+    font-size: 22px;
+  }
+
+  .dashboard-content {
+    padding: 24px 20px;
+  }
+
+  .dashboard-form-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .dashboard-tasks-title {
+    font-size: 20px;
+  }
+
+  .dashboard-empty-state {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dashboard-task-count {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
