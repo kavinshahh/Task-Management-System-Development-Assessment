@@ -14,7 +14,7 @@
    ```bash
    cd server
 
-2. python3 -m venv fastenv
+2. python3 -m venv venv
 3. . source venv/bin/activate
 4. pip install -r requirements.txt
 5. Create a .env file in the backend directory with the following content:
